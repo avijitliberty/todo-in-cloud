@@ -1,0 +1,13 @@
+spring:
+  config:
+    activate:
+      on-profile:
+       - default
+       
+todo-config: TBD
+
+server:
+  servlet:
+    context-path: /todo-server
+
+       
