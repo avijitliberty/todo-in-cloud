@@ -1,0 +1,63 @@
+spring:
+  config:
+    activate:
+      on-profile:
+       - default
+  application:
+    name: todo-ui
+
+# Make the application available at http://localhost:8080
+# These are default settings, but we add them for clarity.
+server:
+  port: 8080
+  servlet:
+    context-path: /todo-ui
+ # session:
+ #   cookie:
+ #     name: SECUREUISESSION
+
+# Configure the Authorization Server and User Info Resource Server details
+#security:
+#  oauth2:
+#    client:
+#      accessTokenUri: http://localhost:9090/auth/oauth/token
+#      userAuthorizationUri: http://localhost:9090/auth/oauth/authorize
+#      logoutUri: http://localhost:9090/auth/exit
+#      clientId: secureui
+#      clientSecret: secureui-secret
+#      #scope: toll_read, toll_report
+#    resource:
+#      user-info-uri: http://localhost:9090/auth/user
+#  basic:
+#    enabled: false
+#    
+#logging:
+#  level:
+#    org.springframework: ERROR
+#    com.example: DEBUG
+#  pattern:
+#    console: "%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"
+#    file: "%d %p %c{1.} [%t] %m%n"
+#  file: logs/secure-ui.log
+#
+#report:
+#  url: http://localhost:8081/services/tolldata
+#  
+#users:
+#  url: http://localhost:8082/services/users 
+#  
+#roles:
+#  url: http://localhost:8082/services/roles
+#  
+#notes:
+#  url: http://localhost:8084/services/notes
+#  
+#auth:
+#  url: http://localhost:9090/auth/authenticate
+
+eureka:
+  client:
+    registerWithEureka: false
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+      

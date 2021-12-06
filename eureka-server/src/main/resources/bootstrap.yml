@@ -4,11 +4,13 @@ spring:
       on-profile:
        - default
   application:
-    name: todo-server
+    name: eureka-server
   cloud:
     config:
       uri: http://localhost:8888
       fail-fast: true
       password: ${CONFIG_SERVICE_PASSWORD}
       username: user
+      
 
+    

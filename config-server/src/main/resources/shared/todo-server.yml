@@ -7,7 +7,19 @@ spring:
 todo-config: TBD
 
 server:
+  address: localhost
   servlet:
     context-path: /todo-server
+    
+eureka:
+  instance:
+    prefer-ip-address: true
+    ip-address: ${server.address}
+    instance-id : ${server.address}:${server.port}
+    metadataMap:
+      configPath: /todo-server
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
 
        

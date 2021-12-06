@@ -1,0 +1,29 @@
+spring:
+  config:
+    activate:
+      on-profile:
+       - default
+  application:
+    name: todo-ui
+  cloud:
+    config:
+      uri: http://localhost:8888
+      fail-fast: true
+      password: ${CONFIG_SERVICE_PASSWORD}
+      username: user
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile:
+       - docker
+  application:
+    name: todo-ui
+  cloud:
+     config:
+        uri: http://config-server:8888
+        fail-fast: true
+        password: ${CONFIG_SERVICE_PASSWORD}
+        username: user

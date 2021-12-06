@@ -10,10 +10,10 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>wiki.cloud.native</groupId>
-	<artifactId>todo-server</artifactId>
+	<artifactId>todo-ui</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>todo-server</name>
-	<description>Demo project for Spring Cloud Config</description>
+	<name>todo-ui</name>
+	<description>Demo project for Spring Cloud Config Client and Eureka Client</description>
 	<properties>
 		<java.version>11</java.version>
 		<spring-cloud.version>2020.0.4</spring-cloud.version>
@@ -33,11 +33,11 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-bootstrap</artifactId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+			<artifactId>spring-cloud-starter-bootstrap</artifactId>
 		</dependency>
 
 		<dependency>
@@ -63,9 +63,6 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
-					<finalName>todo-server</finalName>
-				</configuration>
 			</plugin>
 		</plugins>
 	</build>
